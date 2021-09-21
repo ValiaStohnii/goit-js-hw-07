@@ -8,9 +8,18 @@ refs.input.addEventListener('blur', inputBlur);
 
 function inputChange(event) {
     console.log(event.currentTarget.value);
-    refs.name.textContent = event.currentTarget.value;
+    if (refs.input.value === '') {
+        refs.name.textContent = 'незнакомец';
+    } else {
+        refs.name.textContent = event.currentTarget.value;
+    }
 }
 
-function inputBlur() {
-    refs.name.textContent = 'незнакомец';
-}
+// function inputChange(event) {
+//     console.log(event.currentTarget.value);
+//     refs.name.textContent = event.currentTarget.value;
+// }
+
+// function inputBlur() {
+//     refs.name.textContent = 'незнакомец';
+// }
